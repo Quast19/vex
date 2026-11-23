@@ -30,7 +30,6 @@ func TestEngine_ConcurrentOrdersAndCancels(t *testing.T) {
 		}(uint64(i))
 	}
 
-	// 50 concurrent sellers
 	for i := 1; i <= workers; i++ {
 		go func(id uint64) {
 			defer wg.Done()
